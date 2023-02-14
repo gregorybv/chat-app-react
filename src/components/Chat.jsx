@@ -1,10 +1,20 @@
-import React from 'react';
+import React, {useState, useEffect, useRef} from 'react';
+
+const style = {
+  main: `flex flex-col p-[10px] relative`
+}
 
 const Chat = () => {
-  return (
-    <div>
+  const scroll = useRef()
 
-    </div>
+  return (
+    <>
+      <main className={style.main}>
+
+      </main>
+      <span ref={scroll}></span>
+    </>
+
   )
 }
 
