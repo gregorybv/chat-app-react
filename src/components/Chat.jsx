@@ -2,6 +2,7 @@ import React, {useState, useEffect, useRef} from 'react';
 import Message from "./Message";
 import {db} from "../firebase";
 import {query, collection, orderBy, onSnapshot} from 'firebase/firestore'
+import SendMessage from "./SendMessage";
 
 const style = {
   main: `flex flex-col p-[10px] relative`
@@ -22,7 +23,7 @@ const Chat = () => {
     })
     return () => unsubscribe()
   }, []);
-  
+
 
   return (
     <>
@@ -32,6 +33,7 @@ const Chat = () => {
           <Message key={message.id} message={message}/>
         ))}
       </main>
+      <SendMessage/>
       <span ref={scroll}></span>
     </>
 
