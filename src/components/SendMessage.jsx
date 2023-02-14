@@ -8,7 +8,7 @@ const style = {
   button: `w-[20%] bg-green-500`
 }
 
-const SendMessage = () => {
+const SendMessage = ({scroll}) => {
   const [input, setInput] = useState('')
 
   const sendMessage = async (e) => {
